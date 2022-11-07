@@ -16,13 +16,13 @@ block content
                 p Minimum Number: &nbsp; 
                     input#minNum.form-control(type="number" value=settings.minNum min=0)
                     span &nbsp;
-                    i.fas(data-toggle="modal" data-target="#minModal" class="fa-question-circle")
+                    i.fas(data-bs-toggle="modal" data-bs-target="#minModal" class="fa-question-circle")
                     +modalBoxDark("minModal","Minimum Number")
                         p Minimum bound of the random number.
                 p Maximum Number: &nbsp; 
                     input#maxNum.form-control(type="number" value=settings.maxNum min=0)
                     span &nbsp;
-                    i.fas(data-toggle="modal" data-target="#maxModal" class="fa-question-circle")
+                    i.fas(data-bs-toggle="modal" data-bs-target="#maxModal" class="fa-question-circle")
                     +modalBoxDark("maxModal","Maximum Number")
                         p Maximum bound of the random number.
                 p Number of Random Numbers: &nbsp; 
@@ -35,7 +35,7 @@ block content
                                 option(selected=(settings.count==i ? 'selected':undefined))=i
                             - i++;
                     span &nbsp;
-                    i.fas(data-toggle="modal" data-target="#countModal" class="fa-question-circle")
+                    i.fas(data-bs-toggle="modal" data-bs-target="#countModal" class="fa-question-circle")
                     +modalBoxDark("countModal","Number of Random Numbers")
                         p Number of random numbers required.
             br

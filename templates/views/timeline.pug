@@ -24,15 +24,14 @@ mixin modalBox(number,id,title,param)
 			.modal-content
 				.modal-header(class="backgroundColor"+number)
 					h3.modal-title(id=id+"Label")=title
-					button.close(type="button" data-dismiss="modal" aria-label="Close")
-						span(aria-hidden="true") &times;
+					button.btn-close(type="button" data-bs-dismiss="modal" aria-label="Close")
 				.modal-body
 					if block 
 						block 
 					else
 						p Empty
 				.modal-footer
-					button.btn.btn-link(data-dismiss="modal") Close
+					button.btn.btn-link(data-bs-dismiss="modal") Close
 
 block content
 	.container
@@ -40,7 +39,7 @@ block content
 		#timeline: .timeline
 			+timelineElement("01","Baby Steps","left")
 				p It was their first date and she had been looking forward to it the entire week. She had her eyes on him for months, and it had taken a convoluted scheme with several friends to make it happen, but he'd finally taken the hint and asked her out. After all the time and effort she'd invested into it, she never thought that it would be anything but wonderful. It goes without saying that things didn't work out quite as she expected.
-				p: button#timelineModalTrigger01.btn.btn-link(data-toggle="modal" data-target="#timelineModal01") Read More
+				p: button#timelineModalTrigger01.btn.btn-link(data-bs-toggle="modal" data-bs-target="#timelineModal01") Read More
 				+figureWithCaption("images/pugjs.jpeg","Look there is captions!","w-100")
 				+modalBox("01","timelineModal01","Baby Steps","")
 					p It was hidden under the log beside the stream. It had been there for as long as Jerry had been alive. He wasn't sure if anyone besides him and his friends knew of its existence. He knew that anyone could potentially find it, but it was well enough hidden that it seemed unlikely to happen. The fact that it had been there for more than 30 years attested to this. So it was quite a surprise when he found the item was missing.
